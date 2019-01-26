@@ -1,4 +1,7 @@
 package com.renaldorasa.recipeproject.repositories;
 
-public interface RecipeRepository {
+import com.renaldorasa.recipeproject.domain.Recipe;
+import org.springframework.data.repository.CrudRepository;
+
+public interface RecipeRepository extends CrudRepository<Recipe, Long> {
 }
