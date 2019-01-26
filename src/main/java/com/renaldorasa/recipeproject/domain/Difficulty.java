@@ -1,4 +1,5 @@
-package domain;
+package com.renaldorasa.recipeproject.domain;
+
 
 public enum Difficulty {
 

@@ -1,4 +1,4 @@
-package controllers;
+package com.renaldorasa.recipeproject.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 

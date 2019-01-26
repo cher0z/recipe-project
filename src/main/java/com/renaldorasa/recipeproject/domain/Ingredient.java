@@ -1,4 +1,4 @@
-package domain;
+package com.renaldorasa.recipeproject.domain;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -13,7 +13,7 @@ public class Ingredient {
     private String description;
     private BigDecimal amount;
 
-    @OneToMany
+    @ManyToOne
     private Recipe recipe;
 
     @OneToOne (fetch = FetchType.EAGER)
