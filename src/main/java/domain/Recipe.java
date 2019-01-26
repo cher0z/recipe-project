@@ -26,7 +26,7 @@ public class Recipe {
     //private Difficulty difficulty
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
-    private Set<Ingridient> ingridients;
+    private Set<Ingredient> ingredients;
 
 
     public Long getId() {
@@ -107,5 +107,13 @@ public class Recipe {
 
     public void setNotes(Notes notes) {
         this.notes = notes;
+    }
+
+    public Set<Ingredient> getIngredients() {
+        return ingredients;
+    }
+    
+    public void setIngredients(Set<Ingredient> ingredients) {
+        this.ingredients = ingredients;
     }
 }
