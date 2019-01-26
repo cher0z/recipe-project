@@ -10,6 +10,7 @@ public class Recipe {
     private String URL;
     private String directions;
     private Byte[] image;
+    //private Notes notes;
     //todo add
     //private Difficulty difficulty
 }
