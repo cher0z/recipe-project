@@ -1,6 +1,14 @@
 package domain;
 
+import javax.annotation.processing.Generated;
+import javax.persistence.*;
+
+@Entity
 public class Recipe {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String description;
     private Integer cookTime;
@@ -10,10 +18,20 @@ public class Recipe {
     private String URL;
     private String directions;
     private Byte[] image;
-    //private Notes notes;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Notes notes;
     //todo add
     //private Difficulty difficulty
 
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getDescription() {
         return description;
@@ -77,5 +95,13 @@ public class Recipe {
 
     public void setImage(Byte[] image) {
         this.image = image;
+    }
+
+    public Notes getNotes() {
+        return notes;
+    }
+
+    public void setNotes(Notes notes) {
+        this.notes = notes;
     }
 }
