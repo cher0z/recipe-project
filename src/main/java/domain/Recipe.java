@@ -2,6 +2,7 @@ package domain;
 
 import javax.annotation.processing.Generated;
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Recipe {
@@ -23,6 +24,9 @@ public class Recipe {
     private Notes notes;
     //todo add
     //private Difficulty difficulty
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
+    private Set<Ingridient> ingridients;
 
 
     public Long getId() {
